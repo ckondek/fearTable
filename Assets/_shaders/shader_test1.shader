@@ -57,11 +57,8 @@ Shader "Unlit/shader_test1"
             {
                 // sample the texture
                 float4 col = tex2D(_MainTex, i.uv);
-                col = col * _BaseColor * i.uv.y;
-                float r = sin(i.uv.x);
-                float g = cos(i.uv.y);
-                float b =  col.r;
-                col = float4(r,g,b,1.0);
+                col = col * _BaseColor * _SinTime.w;
+               
 
               
                
